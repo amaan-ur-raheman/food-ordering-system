@@ -1,0 +1,408 @@
+/* 
+    Author - Amaan Ur Raheman, Soham Vaidya, Abhijit Raut
+    Theme - Restaurant Food Order System Admin
+    Version - 1.0
+*/
+
+
+/* CSS For All */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+h1:before {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #ff4757;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.img-curved {
+    border-radius: 15px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+a {
+    color: #ff6b81;
+    text-decoration: none;
+    &:hover {
+        color: #ff4757;
+    }
+}
+
+.table-full {
+    width: 100%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+table tr td:first-child {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.table-30 {
+    width: 30%;
+}
+
+table tr td {
+    padding: 1%;
+    text-align: center;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.button-primary {
+    background-color: #1e90ff;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+        background-color: #3742fa;
+        color: white;
+    }
+}
+
+.button-secondary {
+    background-color: #7bed9f;
+    padding: 2%;
+    margin: 2%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+        background-color: #2de573;
+        color: black;
+    }
+}
+
+.button-danger {
+    background-color: #ff6b81;
+    padding: 2%;
+    margin: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+        background-color: #ff4757;
+        color: white;
+    }
+}
+
+.button-ternary {
+    background-color: #ff6d1e;
+    padding: 2%;
+    margin: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+        background-color: #8f3c01;
+        color: white;
+    }
+}
+
+table tr td input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: auto;
+}
+
+table tr td input:focus {
+    border-color: #ff4757;
+    box-shadow: 0 0 5px rgba(255, 71, 87, 0.4); 
+}
+
+input[type="submit"] {
+    background-color: #ff4757;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #e84118; 
+    box-shadow: 0 6px 12px rgba(255, 71, 87, 0.5); 
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 71, 87, 0.6); 
+}
+
+.table-30 td {
+    padding: 10px;
+}
+
+.radio-options {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+
+.radio-options input[type="radio"] {
+    margin-right: 5px; 
+}
+
+.radio-options label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; 
+}
+
+input[type="radio"] {
+    transform: scale(1.2); 
+    margin-right: 10px;
+}
+
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+    color: #555;
+    width: 100%;
+    display: block; 
+}
+
+input[type="file"]:hover {
+    border-color: #ff4757;
+    background-color: #f1f2f6;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #ff4757;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, border-color 0.3s;
+    resize: vertical;
+    min-height: 100px;
+}
+
+textarea:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+select:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    outline: none;
+}
+
+select:hover {
+    background-color: #e9ecef;
+}
+
+.form-wrapper {
+    background-color: white;
+    width: 50%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form-wrapper table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.success {
+    color: #2de573;
+}
+
+.error {
+    color: #ff4757;
+}
+
+.manage-order-table {
+    width: 100%; /* Ensures table takes full width */
+}
+
+.manage-order-table .action-column {
+    width: 200px; /* Adjust the width of the action column as needed */
+    text-align: center; /* Center the content */
+}
+
+.manage-order-table a.button-secondary,
+.manage-order-table a.button-danger {
+    display: inline-block; /* Allows buttons to fit within the td */
+    padding: 10px 15px; /* Add some padding for better appearance */
+    margin: 0 5px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin: 2px 0;
+}
+
+.manage-order-table a.button-secondary {
+    background-color: #2de573; /* Example color for secondary button */
+    color: #fff; /* Text color */
+}
+
+.manage-order-table a.button-danger {
+    background-color: #ff4757; /* Example color for danger button */
+    color: #fff; /* Text color */
+}
+
+
+/* CSS for Menu */
+
+.logo {
+    width: 10%;
+    float: left;
+}
+
+.menu {
+    line-height: 50px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+
+/* CSS For Main Content*/
+
+.main-content {
+    background-color: #f1f2f6;
+    padding: 3% 0;
+}
+
+.col-4 {
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+
+/* CSS for Footer */
+
+.footer {
+    background-color: #ff4757;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    &:hover {
+        color: #f1f2f6;
+    }
+}
+
+
+/* CSS For Login and Logout */
+
+.login {
+    width: 75%;
+    border: 1px solid gray;
+    margin: 10% auto;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login-background {
+    background-color: white
+}
+
